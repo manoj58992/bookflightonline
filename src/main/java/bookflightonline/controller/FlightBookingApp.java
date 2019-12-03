@@ -24,11 +24,11 @@ public class FlightBookingApp {
 		return mv;
 	}
 	@RequestMapping(value = "process-flight", method = RequestMethod.POST)
-	public ModelAndView saveFlight(FlightDto index) {
-		System.out.println(index.toString());
+	public ModelAndView saveFlight(FlightDto fd) {
+		System.out.println(fd.toString());
 
 		ModelAndView mv = new ModelAndView("index");
-		mv.addObject("flyObj", index);
+		mv.addObject("flyObj", fd);
 		return mv;
 	}
 	public FlightService getFlightservice() {
